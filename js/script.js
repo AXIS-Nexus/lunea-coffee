@@ -6,9 +6,11 @@ if ('scrollRestoration' in window.history) {
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroAnimation();
+  initHeroSlider();
   initHeaderScroll();
   initHamburgerMenu();
   initScrollReveal();
+  initDummyLinks();
 });
 
 function initHeroAnimation() {
@@ -23,8 +25,11 @@ function initHeroAnimation() {
 
   logoPaths.forEach((path) => {
     const length = Math.ceil(
-      typeof path.getTotalLength === 'function' ? path.getTotalLength() : path.getComputedTextLength()
+      typeof path.getTotalLength === 'function'
+        ? path.getTotalLength()
+        : path.getComputedTextLength()
     );
+
     path.style.setProperty('--path-length', length);
   });
 
@@ -33,10 +38,12 @@ function initHeroAnimation() {
 
     const stageRect = logoStage.getBoundingClientRect();
     const targetRect = targetLogo.getBoundingClientRect();
+
     const stageCenterX = stageRect.left + stageRect.width / 2;
     const stageCenterY = stageRect.top + stageRect.height / 2;
     const targetCenterX = targetRect.left + targetRect.width / 2;
     const targetCenterY = targetRect.top + targetRect.height / 2;
+
     const scale = targetRect.width / stageRect.width;
 
     logoStage.style.setProperty('--logo-move-x', `${targetCenterX - stageCenterX}px`);
@@ -46,6 +53,7 @@ function initHeroAnimation() {
 
   updateLogoTravel();
   window.addEventListener('resize', updateLogoTravel, { passive: true });
+
   document.body.classList.add('is-loaded');
 
   if (reduceMotion) {
@@ -53,18 +61,76 @@ function initHeroAnimation() {
     return;
   }
 
-  window.setTimeout(() => {
-    updateLogoTravel();
-    document.body.classList.add('is-logo-moving');
-  }, 2500);
+  if (logoStage && targetLogo) {
+    window.setTimeout(() => {
+      updateLogoTravel();
+      document.body.classList.add('is-logo-moving');
+    }, 2500);
 
-  window.setTimeout(() => {
-    document.body.classList.add('is-logo-settled');
-  }, 3200);
+    window.setTimeout(() => {
+      document.body.classList.add('is-logo-settled');
+    }, 3200);
 
-  window.setTimeout(() => {
-    document.body.classList.add('is-hero-complete');
-  }, 3600);
+    window.setTimeout(() => {
+      document.body.classList.add('is-hero-complete');
+    }, 3600);
+  } else {
+    window.setTimeout(() => {
+      document.body.classList.add('is-hero-complete');
+    }, 3300);
+  }
+}
+
+function initHeroSlider() {
+  const slider = document.querySelector('[data-hero-slider]');
+  if (!slider) return;
+
+  const slides = Array.from(slider.querySelectorAll('.hero-slider__image'));
+  if (slides.length <= 1) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let currentIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+
+  if (currentIndex < 0) {
+    currentIndex = 0;
+    slides[0].classList.add('is-active');
+  }
+
+  slides.forEach((slide, index) => {
+    slide.setAttribute('aria-hidden', index === currentIndex ? 'false' : 'true');
+  });
+
+  if (reduceMotion) return;
+
+  const showSlide = (nextIndex) => {
+    slides[currentIndex].classList.remove('is-active');
+    slides[currentIndex].setAttribute('aria-hidden', 'true');
+
+    slides[nextIndex].classList.add('is-active');
+    slides[nextIndex].setAttribute('aria-hidden', 'false');
+
+    currentIndex = nextIndex;
+  };
+
+  const goNext = () => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  };
+
+  let timer = window.setInterval(goNext, 5200);
+
+  const stopSlider = () => {
+    window.clearInterval(timer);
+  };
+
+  const startSlider = () => {
+    timer = window.setInterval(goNext, 5200);
+  };
+
+  slider.addEventListener('mouseenter', stopSlider);
+  slider.addEventListener('mouseleave', startSlider);
+  slider.addEventListener('focusin', stopSlider);
+  slider.addEventListener('focusout', startSlider);
 }
 
 function initHeaderScroll() {
@@ -122,6 +188,7 @@ function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
+
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
@@ -131,4 +198,12 @@ function initScrollReveal() {
   });
 
   revealItems.forEach((item) => observer.observe(item));
+}
+
+function initDummyLinks() {
+  document.querySelectorAll('[data-dummy-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  });
 }

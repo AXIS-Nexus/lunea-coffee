@@ -8,7 +8,7 @@
   <meta property="og:title" content="Lunéa Coffee">
   <meta property="og:description" content="月明かりみたいに、やさしい一杯を。">
   <!-- GitHub Pages 公開後は、og:image を公開URLの絶対パスへ差し替えてください。 -->
-  <meta property="og:image" content="images/ogp-lunea-coffee.webp">
+  <meta property="og:image" content="https://axis-nexus.github.io/lunea-coffee/images/ogp-lunea-coffee.webp">
   <meta property="og:type" content="website">
   <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
       <a href="#seasonal">Seasonal</a>
       <a href="#gallery">Gallery</a>
       <a href="#access">Access</a>
-      <span class="site-header__instagram" aria-disabled="true">Instagram</span>
+      <span class="site-header__instagram" aria-disabled="true">Instagram Sample</span>
     </nav>
   </header>
 
@@ -60,8 +60,13 @@
             <a class="button button--outline" href="#access">Accessを見る</a>
           </div>
         </div>
-        <figure class="hero__image">
-          <img src="images/hero-latte-bake.webp" width="960" height="720" alt="ラテと焼き菓子が並ぶ静かなカフェテーブル">
+        <figure class="hero__image" aria-label="Lunéa Coffee の店内とメニューイメージ">
+          <div class="hero-slider" data-hero-slider>
+            <img class="hero-slider__image is-active" src="images/hero/hero-window-seat.webp" width="960" height="720" alt="月明かりのような光が差し込む静かな窓際席">
+            <img class="hero-slider__image" src="images/hero/hero-latte-bake.webp" width="960" height="720" alt="ラテと焼き菓子が並ぶ木のテーブル">
+            <img class="hero-slider__image" src="images/hero/hero-cafe-interior.webp" width="960" height="720" alt="ネイビーのアクセントがある落ち着いたカフェ店内">
+            <img class="hero-slider__image" src="images/hero/hero-signature-drink.webp" width="960" height="720" alt="月をイメージした淡いラベンダーカラーのシグネチャードリンク">
+          </div>
         </figure>
       </div>
     </section>
@@ -92,6 +97,9 @@
           <h2 class="section-heading__ja" id="menu-title">今日の気分に寄り添う、コーヒーと焼き菓子。</h2>
           <p class="section-heading__lead">定番のコーヒーから、香りを楽しむラテ、店内で焼き上げる小さな焼き菓子まで。静かな時間に合うメニューを揃えました。</p>
         </div>
+        <figure class="menu__visual">
+          <img src="images/menu-scone-coffee.webp" width="1200" height="720" loading="lazy" alt="コーヒーとスコーンを並べたメニューイメージ">
+        </figure>
         <figure class="menu__visual">
           <img src="images/menu-scone-coffee.webp" width="1200" height="720" loading="lazy" alt="コーヒーとスコーンを並べたメニューイメージ">
         </figure>
@@ -171,6 +179,7 @@
         <section class="information" aria-labelledby="information-title">
           <div class="section-heading">
             <p class="section-heading__en">Information</p>
+            <h2 class="section-heading__ja" id="information-title">ご来店前に。</h2>
           </div>
           <dl class="information__list">
             <div><dt>Open</dt><dd>11:00 - 19:00</dd></div>
