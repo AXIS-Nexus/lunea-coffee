@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180">
+  <symbol id="logo-lunea" viewBox="0 0 720 180">
+    <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" fill="none" stroke="#F8F5EF" stroke-width="1.5" font-family="Snell Roundhand, Brush Script MT, Cormorant Garamond, serif" font-size="86">Lunéa Coffee</text>
+  </symbol>
+  <use href="#logo-lunea"/>
+</svg>

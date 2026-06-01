@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunéa Coffee ｜ 月明かりみたいに、やさしい一杯を。</title>
+  <meta name="description" content="Lunéa Coffee は、月明かりのように静かでやさしい時間を届ける架空のカフェサイトです。コーヒー、焼き菓子、季節限定メニューをご紹介します。">
+  <meta property="og:title" content="Lunéa Coffee">
+  <meta property="og:description" content="月明かりみたいに、やさしい一杯を。">
+  <!-- GitHub Pages 公開後は、og:image を公開URLの絶対パスへ差し替えてください。 -->
+  <meta property="og:image" content="images/ogp-lunea-coffee.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="site-header__logo" href="#hero" aria-label="Lunéa Coffee トップへ">Lunéa Coffee</a>
+    <button class="site-header__toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav" data-menu-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-header__nav" id="global-nav" aria-label="グローバルナビゲーション" data-nav>
+      <a href="#concept">Concept</a>
+      <a href="#menu">Menu</a>
+      <a href="#seasonal">Seasonal</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#access">Access</a>
+      <span class="site-header__instagram" aria-disabled="true">Instagram</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__logo-stage" aria-hidden="true" data-logo-stage>
+        <svg class="hero__logo-svg" focusable="false" viewBox="0 0 720 180">
+          <text class="hero__logo-draw hero__logo-draw--stage" x="50%" y="52%" text-anchor="middle" dominant-baseline="middle">Lunéa Coffee</text>
+        </svg>
+      </div>
+      <div class="hero__intro">
+        <h1 class="hero__logo" id="hero-title">
+          <span class="visually-hidden">Lunéa Coffee</span>
+          <svg class="hero__logo-svg" aria-hidden="true" focusable="false" viewBox="0 0 720 180">
+            <text class="hero__logo-draw" x="50%" y="52%" text-anchor="middle" dominant-baseline="middle">Lunéa Coffee</text>
+          </svg>
+        </h1>
+      </div>
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__subcopy">coffee / bake / quiet time</p>
+          <p class="hero__copy">月明かりみたいに、<br>やさしい一杯を。</p>
+          <p class="hero__lead">深いネイビーのような静けさと、月明かりのように淡いやさしさを。<br>Lunéa Coffee は、日常に小さな余白を届けるカフェです。</p>
+          <div class="hero__cta">
+            <a class="button button--primary" href="#menu">Menuを見る</a>
+            <a class="button button--outline" href="#access">Accessを見る</a>
+          </div>
+        </div>
+        <figure class="hero__image">
+          <img src="images/hero-latte-bake.webp" width="960" height="720" alt="ラテと焼き菓子が並ぶ静かなカフェテーブル">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section concept reveal" id="concept" aria-labelledby="concept-title">
+      <div class="section__inner concept__inner">
+        <div class="concept__text">
+          <div class="section-heading">
+            <p class="section-heading__en">Concept</p>
+            <h2 class="section-heading__ja" id="concept-title">日常に、静かな余白を。</h2>
+          </div>
+          <div class="concept__body">
+            <p>Lunéa Coffee は、忙しい毎日の中で少しだけ立ち止まれる小さなカフェです。</p>
+            <p>白と木のぬくもり、深いネイビーの静けさ、淡いラベンダーのやさしい彩り。一杯のコーヒーと焼き菓子が、慌ただしい日常をそっとほどいてくれます。</p>
+            <p>ひとりで過ごす午後にも、大切な人と過ごす時間にも。月明かりのように、静かに寄り添う場所でありたいと考えています。</p>
+          </div>
+        </div>
+        <figure class="concept__image">
+          <img src="images/concept-window-seat.webp" width="800" height="1000" loading="lazy" alt="柔らかな自然光が入る窓際のカフェ席">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section menu reveal" id="menu" aria-labelledby="menu-title">
+      <div class="section__inner">
+        <div class="section-heading section-heading--center">
+          <p class="section-heading__en">Menu</p>
+          <h2 class="section-heading__ja" id="menu-title">今日の気分に寄り添う、コーヒーと焼き菓子。</h2>
+          <p class="section-heading__lead">定番のコーヒーから、香りを楽しむラテ、店内で焼き上げる小さな焼き菓子まで。静かな時間に合うメニューを揃えました。</p>
+        </div>
+        <figure class="menu__visual">
+          <img src="images/menu-scone-coffee.webp" width="1200" height="720" loading="lazy" alt="コーヒーとスコーンを並べたメニューイメージ">
+        </figure>
+        <div class="menu__grid">
+          <article class="menu__card">
+            <h3>Coffee</h3>
+            <ul class="menu__list">
+              <li><span><strong>Hand Drip Coffee</strong><small>季節の豆を一杯ずつ丁寧に抽出します。</small></span><b>¥580</b></li>
+              <li><span><strong>Americano</strong><small>すっきりと飲みやすい定番の一杯。</small></span><b>¥520</b></li>
+              <li><span><strong>Cold Brew</strong><small>低温でじっくり抽出した、まろやかな水出しコーヒー。</small></span><b>¥620</b></li>
+            </ul>
+          </article>
+          <article class="menu__card">
+            <h3>Latte</h3>
+            <ul class="menu__list">
+              <li><span><strong>Café Latte</strong><small>ミルクの甘さを感じる、やさしいラテ。</small></span><b>¥620</b></li>
+              <li><span><strong>Vanilla Latte</strong><small>ほんのり甘く香る、バニラの余韻。</small></span><b>¥680</b></li>
+              <li><span><strong>Lavender Honey Latte</strong><em>Signature</em><small>ラベンダーとはちみつが香る、Lunéa の看板ラテ。</small></span><b>¥720</b></li>
+            </ul>
+          </article>
+          <article class="menu__card">
+            <h3>Bake</h3>
+            <ul class="menu__list">
+              <li><span><strong>Plain Scone</strong><small>外はさっくり、中はしっとり焼き上げたスコーン。</small></span><b>¥420</b></li>
+              <li><span><strong>Lemon Pound Cake</strong><small>爽やかなレモンが香る、軽やかなパウンドケーキ。</small></span><b>¥480</b></li>
+              <li><span><strong>Financier</strong><small>焦がしバターの香りを閉じ込めた小さな焼き菓子。</small></span><b>¥360</b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section seasonal reveal" id="seasonal" aria-labelledby="seasonal-title">
+      <div class="section__inner">
+        <div class="section-heading section-heading--center">
+          <p class="section-heading__en">Seasonal</p>
+          <h2 class="section-heading__ja" id="seasonal-title">季節にだけ出会える、淡いひとくち。</h2>
+          <p class="section-heading__lead">季節の空気に合わせて、見た目にもやさしい限定メニューをご用意しています。その時期だけの味わいをお楽しみください。</p>
+        </div>
+        <div class="seasonal__grid">
+          <article class="seasonal__card">
+            <figure><img src="images/seasonal-moon-cream-soda.webp" width="800" height="1000" loading="lazy" alt="淡いラベンダーカラーのクリームソーダ"></figure>
+            <div><p class="seasonal__label">Limited</p><h3>Moon Cream Soda</h3><p>月明かりをイメージした、淡いラベンダーカラーのクリームソーダ。</p><b>¥760</b></div>
+          </article>
+          <article class="seasonal__card">
+            <figure><img src="images/seasonal-berry-tart.webp" width="800" height="1000" loading="lazy" alt="ベリーとマスカルポーネを合わせた季節のタルト"></figure>
+            <div><p class="seasonal__label">Limited</p><h3>Berry Mascarpone Tart</h3><p>甘酸っぱいベリーとマスカルポーネを合わせた季節のタルト。</p><b>¥680</b></div>
+          </article>
+          <article class="seasonal__card">
+            <figure><img src="images/seasonal-blue-lemonade.webp" width="800" height="1000" loading="lazy" alt="夜空の青をイメージしたブルーレモネード"></figure>
+            <div><p class="seasonal__label">Limited</p><h3>Night Blue Lemonade</h3><p>夜空の青をイメージした、すっきり爽やかなレモネード。</p><b>¥700</b></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery reveal" id="gallery" aria-labelledby="gallery-title">
+      <div class="section__inner">
+        <div class="section-heading section-heading--center">
+          <p class="section-heading__en">Gallery</p>
+          <h2 class="section-heading__ja" id="gallery-title">静かな時間のかけら。</h2>
+          <p class="section-heading__lead">店内の空気感や、コーヒーを待つ時間。Lunéa Coffee で過ごす小さなひとときを写真でご紹介します。</p>
+        </div>
+        <div class="gallery__grid">
+          <figure class="gallery__item"><img src="images/gallery-bake.webp" width="720" height="720" loading="lazy" alt="焼き菓子のアップ"><figcaption>fresh baked sweets</figcaption></figure>
+          <figure class="gallery__item"><img src="images/gallery-hand-coffee.webp" width="720" height="720" loading="lazy" alt="手元に置かれたコーヒーカップ"><figcaption>quiet coffee time</figcaption></figure>
+          <figure class="gallery__item"><img src="images/gallery-cafe-interior.webp" width="720" height="720" loading="lazy" alt="余白のある静かなカフェの店内"><figcaption>calm interior</figcaption></figure>
+          <figure class="gallery__item"><img src="images/gallery-blue-lemonade.webp" width="720" height="720" loading="lazy" alt="ブルーレモネードのグラス"><figcaption>seasonal drink</figcaption></figure>
+          <figure class="gallery__item"><img src="images/seasonal-lavender-latte.webp" width="720" height="720" loading="lazy" alt="淡いラベンダーカラーのラテ"><figcaption>milk and espresso</figcaption></figure>
+          <figure class="gallery__item"><img src="images/concept-window-seat.webp" width="720" height="720" loading="lazy" alt="柔らかな光が入る窓際席"><figcaption>window side</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit reveal" aria-label="店舗情報とアクセス">
+      <div class="section__inner visit__grid">
+        <section class="information" aria-labelledby="information-title">
+          <div class="section-heading">
+            <p class="section-heading__en">Information</p>
+          </div>
+          <dl class="information__list">
+            <div><dt>Open</dt><dd>11:00 - 19:00</dd></div>
+            <div><dt>Closed</dt><dd>Wednesday</dd></div>
+            <div><dt>Seats</dt><dd>12 seats</dd></div>
+            <div><dt>Payment</dt><dd>Cash / Credit Card / QR</dd></div>
+            <div><dt>Takeout</dt><dd>Drinks only</dd></div>
+            <div><dt>Address</dt><dd>札幌市中央区南1条西◯丁目</dd></div>
+          </dl>
+          <p class="information__note">席数の少ない小さなカフェのため、混雑時はお時間をいただく場合がございます。最新のお知らせは Instagram をご確認ください。</p>
+        </section>
+        <section class="access" id="access" aria-labelledby="access-title">
+          <div class="section-heading">
+            <p class="section-heading__en">Access</p>
+            <h2 class="section-heading__ja" id="access-title">静かな路地の、小さなカフェへ。</h2>
+          </div>
+          <p>地下鉄大通駅から徒歩5分。街の賑わいから少し離れた、静かな路地に Lunéa Coffee はあります。</p>
+          <address>Lunéa Coffee<br>札幌市中央区南1条西◯丁目<br>地下鉄大通駅から徒歩5分</address>
+          <div class="access__map" aria-label="Lunéa Coffee 周辺の地図風イメージ">
+            <span>Lunéa Coffee</span>
+          </div>
+          <span class="button button--disabled" aria-disabled="true">Google Map Sample</span>
+        </section>
+      </div>
+    </section>
+
+    <section class="section follow reveal" aria-labelledby="follow-title">
+      <div class="section__inner follow__inner">
+        <div class="section-heading section-heading--center">
+          <p class="section-heading__en">Follow us</p>
+          <h2 class="section-heading__ja" id="follow-title">最新情報は Instagram で。</h2>
+        </div>
+        <p>季節限定メニューや営業日のお知らせは、Instagram で更新しています。Lunéa Coffee の静かな日常を、ぜひ覗いてみてください。</p>
+        <p class="sample-note">Instagram はポートフォリオ用の Sample 表示です。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__logo">Lunéa Coffee</p>
+      <p>coffee / bake / quiet time</p>
+      <nav aria-label="フッターナビゲーション">
+        <a href="#concept">Concept</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#access">Access</a>
+      </nav>
+      <p class="site-footer__copy">© 2026 Lunéa Coffee. All rights reserved.</p>
+      <p class="site-footer__notice">※本サイトはポートフォリオ掲載用に制作した架空のカフェサイトです。実在の店舗・団体とは関係ありません。</p>
+    </div>
+  </footer>
+</body>
+</html>
