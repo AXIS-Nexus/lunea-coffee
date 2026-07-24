@@ -57,7 +57,7 @@ function initHeroAnimation() {
   document.body.classList.add('is-loaded');
 
   if (reduceMotion) {
-    document.body.classList.add('is-logo-settled', 'is-hero-complete');
+    document.body.classList.add('is-logo-settled', 'is-hero-bg-visible', 'is-hero-complete');
     return;
   }
 
@@ -66,17 +66,21 @@ function initHeroAnimation() {
       updateLogoTravel();
       document.body.classList.add('is-logo-moving');
     }, 2500);
-
+  
     window.setTimeout(() => {
       document.body.classList.add('is-logo-settled');
     }, 3200);
-
+  
+    window.setTimeout(() => {
+      document.body.classList.add('is-hero-bg-visible');
+    }, 3300);
+  
     window.setTimeout(() => {
       document.body.classList.add('is-hero-complete');
-    }, 3600);
+    }, 3900);
   } else {
     window.setTimeout(() => {
-      document.body.classList.add('is-hero-complete');
+      document.body.classList.add('is-hero-bg-visible', 'is-hero-complete');
     }, 3300);
   }
 }

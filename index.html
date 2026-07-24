@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lunéa Coffee ｜ 月明かりみたいに、やさしい一杯を。</title>
+  <title>Lunéa Coffee ｜ 月明かりのように、やさしい一杯を。</title>
   <meta name="description" content="Lunéa Coffee は、月明かりのように静かでやさしい時間を届ける架空のカフェサイトです。コーヒー、焼き菓子、季節限定メニューをご紹介します。">
   <meta property="og:title" content="Lunéa Coffee">
   <meta property="og:description" content="月明かりみたいに、やさしい一杯を。">
@@ -13,7 +13,7 @@
   <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -31,44 +31,41 @@
       <a href="#seasonal">Seasonal</a>
       <a href="#gallery">Gallery</a>
       <a href="#access">Access</a>
-      <span class="site-header__instagram" aria-disabled="true">Instagram Sample</span>
+      <span class="site-header__instagram">Instagram Sample</span>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-slider hero-slider--background" data-hero-slider aria-hidden="true">
+        <img class="hero-slider__image is-active" src="images/hero/hero-window-seat.webp" width="1600" height="1067" alt="">
+        <img class="hero-slider__image" src="images/hero/hero-latte-bake.webp" width="1600" height="1067" alt="">
+        <img class="hero-slider__image" src="images/hero/hero-cafe-interior.webp" width="1600" height="1067" alt="">
+        <img class="hero-slider__image" src="images/hero/hero-signature-drink.webp" width="1600" height="1067" alt="">
+      </div>
+    
+      <div class="hero__overlay" aria-hidden="true"></div>
+    
       <div class="hero__logo-stage" aria-hidden="true" data-logo-stage>
         <svg class="hero__logo-svg" focusable="false" viewBox="0 0 720 180">
           <text class="hero__logo-draw hero__logo-draw--stage" x="50%" y="52%" text-anchor="middle" dominant-baseline="middle">Lunéa Coffee</text>
         </svg>
       </div>
-      <div class="hero__intro">
-        <h1 class="hero__logo" id="hero-title">
-          <span class="visually-hidden">Lunéa Coffee</span>
-          <svg class="hero__logo-svg" aria-hidden="true" focusable="false" viewBox="0 0 720 180">
-            <text class="hero__logo-draw" x="50%" y="52%" text-anchor="middle" dominant-baseline="middle">Lunéa Coffee</text>
-          </svg>
-        </h1>
-      </div>
+    
       <div class="hero__content">
         <div class="hero__text">
+          <h1 class="hero__logo" id="hero-title">
+            <span class="visually-hidden">Lunéa Coffee</span>
+            <svg class="hero__logo-svg" aria-hidden="true" focusable="false" viewBox="0 0 720 180">
+              <text class="hero__logo-draw" x="50%" y="52%" text-anchor="middle" dominant-baseline="middle">Lunéa Coffee</text>
+            </svg>
+          </h1>
+    
           <p class="hero__subcopy">coffee / bake / quiet time</p>
-          <p class="hero__copy">月明かりみたいに、<br>やさしい一杯を。</p>
-          <p class="hero__lead">深いネイビーのような静けさと、月明かりのように淡いやさしさを。<br>Lunéa Coffee は、日常に小さな余白を届けるカフェです。</p>
-          <div class="hero__cta">
-            <a class="button button--primary" href="#menu">Menuを見る</a>
-            <a class="button button--outline" href="#access">Accessを見る</a>
-          </div>
+          <p class="hero__copy">月明かりみたいにやさしい一杯を。</p>
         </div>
-        <figure class="hero__image" aria-label="Lunéa Coffee の店内とメニューイメージ">
-          <div class="hero-slider" data-hero-slider>
-            <img class="hero-slider__image is-active" src="images/hero/hero-window-seat.webp" width="960" height="720" alt="月明かりのような光が差し込む静かな窓際席">
-            <img class="hero-slider__image" src="images/hero/hero-latte-bake.webp" width="960" height="720" alt="ラテと焼き菓子が並ぶ木のテーブル">
-            <img class="hero-slider__image" src="images/hero/hero-cafe-interior.webp" width="960" height="720" alt="ネイビーのアクセントがある落ち着いたカフェ店内">
-            <img class="hero-slider__image" src="images/hero/hero-signature-drink.webp" width="960" height="720" alt="月をイメージした淡いラベンダーカラーのシグネチャードリンク">
-          </div>
-        </figure>
       </div>
+    
     </section>
 
     <section class="section concept reveal" id="concept" aria-labelledby="concept-title">
@@ -97,9 +94,6 @@
           <h2 class="section-heading__ja" id="menu-title">今日の気分に寄り添う、コーヒーと焼き菓子。</h2>
           <p class="section-heading__lead">定番のコーヒーから、香りを楽しむラテ、店内で焼き上げる小さな焼き菓子まで。静かな時間に合うメニューを揃えました。</p>
         </div>
-        <figure class="menu__visual">
-          <img src="images/menu-scone-coffee.webp" width="1200" height="720" loading="lazy" alt="コーヒーとスコーンを並べたメニューイメージ">
-        </figure>
         <figure class="menu__visual">
           <img src="images/menu-scone-coffee.webp" width="1200" height="720" loading="lazy" alt="コーヒーとスコーンを並べたメニューイメージ">
         </figure>
@@ -163,13 +157,22 @@
           <h2 class="section-heading__ja" id="gallery-title">静かな時間のかけら。</h2>
           <p class="section-heading__lead">店内の空気感や、コーヒーを待つ時間。Lunéa Coffee で過ごす小さなひとときを写真でご紹介します。</p>
         </div>
-        <div class="gallery__grid">
-          <figure class="gallery__item"><img src="images/gallery-bake.webp" width="720" height="720" loading="lazy" alt="焼き菓子のアップ"><figcaption>fresh baked sweets</figcaption></figure>
-          <figure class="gallery__item"><img src="images/gallery-hand-coffee.webp" width="720" height="720" loading="lazy" alt="手元に置かれたコーヒーカップ"><figcaption>quiet coffee time</figcaption></figure>
-          <figure class="gallery__item"><img src="images/gallery-cafe-interior.webp" width="720" height="720" loading="lazy" alt="余白のある静かなカフェの店内"><figcaption>calm interior</figcaption></figure>
-          <figure class="gallery__item"><img src="images/gallery-blue-lemonade.webp" width="720" height="720" loading="lazy" alt="ブルーレモネードのグラス"><figcaption>seasonal drink</figcaption></figure>
-          <figure class="gallery__item"><img src="images/seasonal-lavender-latte.webp" width="720" height="720" loading="lazy" alt="淡いラベンダーカラーのラテ"><figcaption>milk and espresso</figcaption></figure>
-          <figure class="gallery__item"><img src="images/concept-window-seat.webp" width="720" height="720" loading="lazy" alt="柔らかな光が入る窓際席"><figcaption>window side</figcaption></figure>
+        <div class="gallery__marquee" aria-label="Lunéa Coffee のギャラリー写真">
+          <div class="gallery__track">
+            <figure class="gallery__item"><img src="images/gallery-cafe-interior.webp" width="720" height="720" loading="lazy" alt="木のテーブルとやわらかな照明がある静かなカフェ店内"><figcaption>calm interior</figcaption></figure>
+            <figure class="gallery__item"><img src="images/gallery-blue-lemonade.webp" width="720" height="720" loading="lazy" alt="夜空を思わせる青いレモネードのグラス"><figcaption>seasonal drink</figcaption></figure>
+            <figure class="gallery__item"><img src="images/seasonal-lavender-latte.webp" width="720" height="720" loading="lazy" alt="淡いラベンダーカラーのラテ"><figcaption>lavender latte</figcaption></figure>
+            <figure class="gallery__item"><img src="images/concept-window-seat.webp" width="720" height="720" loading="lazy" alt="月明かりが差し込む窓際のカフェ席"><figcaption>moonlit window seat</figcaption></figure>
+            <figure class="gallery__item"><img src="images/gallery-lavender-cream-tart.webp" width="720" height="720" loading="lazy" alt="淡いラベンダークリームをのせた小さなタルト"><figcaption>lavender cream tart</figcaption></figure>
+            <figure class="gallery__item"><img src="images/gallery-moonlit-pudding.webp" width="720" height="720" loading="lazy" alt="月明かりのような光の中に置かれたクラシックプリン"><figcaption>moonlit pudding</figcaption></figure>
+          
+            <figure class="gallery__item" aria-hidden="true"><img src="images/gallery-cafe-interior.webp" width="720" height="720" loading="lazy" alt=""><figcaption>calm interior</figcaption></figure>
+            <figure class="gallery__item" aria-hidden="true"><img src="images/gallery-blue-lemonade.webp" width="720" height="720" loading="lazy" alt=""><figcaption>seasonal drink</figcaption></figure>
+            <figure class="gallery__item" aria-hidden="true"><img src="images/seasonal-lavender-latte.webp" width="720" height="720" loading="lazy" alt=""><figcaption>lavender latte</figcaption></figure>
+            <figure class="gallery__item" aria-hidden="true"><img src="images/concept-window-seat.webp" width="720" height="720" loading="lazy" alt=""><figcaption>moonlit window seat</figcaption></figure>
+            <figure class="gallery__item" aria-hidden="true"><img src="images/gallery-lavender-cream-tart.webp" width="720" height="720" loading="lazy" alt=""><figcaption>lavender cream tart</figcaption></figure>
+            <figure class="gallery__item" aria-hidden="true"><img src="images/gallery-moonlit-pudding.webp" width="720" height="720" loading="lazy" alt=""><figcaption>moonlit pudding</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>
@@ -201,7 +204,7 @@
           <div class="access__map" aria-label="Lunéa Coffee 周辺の地図風イメージ">
             <span>Lunéa Coffee</span>
           </div>
-          <span class="button button--disabled" aria-disabled="true">Google Map Sample</span>
+          <span class="button button--disabled">Google Map Sample</span>
         </section>
       </div>
     </section>
